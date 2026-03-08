@@ -4,12 +4,12 @@ import { Instagram, Youtube, Twitter } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const creators = [
-  { name: "Priya Sharma", category: "Fashion", followers: "2.1M", engagement: "4.8%", platforms: ["instagram", "youtube"], avatar: "PS" },
-  { name: "Alex Chen", category: "Tech", followers: "890K", engagement: "6.2%", platforms: ["youtube", "twitter"], avatar: "AC" },
-  { name: "Maya Rodriguez", category: "Fitness", followers: "1.5M", engagement: "5.1%", platforms: ["instagram"], avatar: "MR" },
-  { name: "Raj Patel", category: "Food", followers: "3.2M", engagement: "7.3%", platforms: ["instagram", "youtube"], avatar: "RP" },
-  { name: "Sarah Kim", category: "Beauty", followers: "1.8M", engagement: "5.9%", platforms: ["instagram", "youtube", "twitter"], avatar: "SK" },
-  { name: "James Okafor", category: "Gaming", followers: "4.1M", engagement: "8.1%", platforms: ["youtube", "twitter"], avatar: "JO" },
+  { name: "Priya Sharma", id: "priya-sharma", category: "Fashion", followers: "2.1M", engagement: "4.8%", platforms: ["instagram", "youtube"], avatar: "PS" },
+  { name: "Alex Chen", id: "alex-chen", category: "Tech", followers: "890K", engagement: "6.2%", platforms: ["youtube", "twitter"], avatar: "AC" },
+  { name: "Maya Rodriguez", id: "maya-rodriguez", category: "Fitness", followers: "1.5M", engagement: "5.1%", platforms: ["instagram"], avatar: "MR" },
+  { name: "Raj Patel", id: "raj-patel", category: "Food", followers: "3.2M", engagement: "7.3%", platforms: ["instagram", "youtube"], avatar: "RP" },
+  { name: "Sarah Kim", id: "sarah-kim", category: "Beauty", followers: "1.8M", engagement: "5.9%", platforms: ["instagram", "youtube", "twitter"], avatar: "SK" },
+  { name: "James Okafor", id: "james-okafor", category: "Gaming", followers: "4.1M", engagement: "8.1%", platforms: ["youtube", "twitter"], avatar: "JO" },
 ];
 
 const platformIcon = (p: string) => {
