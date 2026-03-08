@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Highlight } from "@/components/ui/hero-highlight";
-import { Logos3 } from "@/components/ui/logos3";
 
 const avatars = [
   { initials: "JD", color: "bg-primary" },
@@ -163,7 +162,34 @@ const HeroSection = () => {
           transition={{ delay: 1, duration: 0.6 }}
           className="mt-16"
         >
-          <Logos3 heading="Trusted by global leaders" />
+          <p className="text-sm font-semibold text-primary-foreground/60 uppercase tracking-[0.2em] text-center mb-6">Trusted by global leaders</p>
+          <div className="relative mx-auto flex items-center justify-center lg:max-w-4xl overflow-hidden">
+            <div className="flex items-center gap-12 md:gap-16 animate-[scroll_20s_linear_infinite]">
+              {[
+                { name: "Amazon", letters: "AMAZON" },
+                { name: "Spotify", letters: "SPOTIFY" },
+                { name: "Nike", letters: "NIKE" },
+                { name: "Google", letters: "GOOGLE" },
+                { name: "Swiggy", letters: "SWIGGY" },
+                { name: "Stripe", letters: "STRIPE" },
+                { name: "Amazon", letters: "AMAZON" },
+                { name: "Spotify", letters: "SPOTIFY" },
+                { name: "Nike", letters: "NIKE" },
+                { name: "Google", letters: "GOOGLE" },
+                { name: "Swiggy", letters: "SWIGGY" },
+                { name: "Stripe", letters: "STRIPE" },
+              ].map((logo, i) => (
+                <span
+                  key={`${logo.name}-${i}`}
+                  className="text-xl md:text-2xl font-extrabold text-primary-foreground/40 tracking-[0.15em] uppercase whitespace-nowrap hover:text-primary-foreground/70 transition-colors duration-300 cursor-default select-none"
+                >
+                  {logo.letters}
+                </span>
+              ))}
+            </div>
+            <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-[hsl(262_83%_12%)] to-transparent z-10" />
+            <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-[hsl(262_83%_12%)] to-transparent z-10" />
+          </div>
         </motion.div>
       </div>
 
