@@ -41,14 +41,15 @@ const CreatorShowcase = () => {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {creators.map((c, i) => (
-            <motion.div
-              key={c.name}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.08 }}
-              whileHover={{ y: -4 }}
-              className="rounded-2xl border border-border bg-card p-6 shadow-card hover:shadow-glow transition-all duration-300 cursor-pointer"
+            <Link to={`/creator/${c.id}`} key={c.name}>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.08 }}
+                whileHover={{ y: -4 }}
+                className="rounded-2xl border border-border bg-card p-6 shadow-card hover:shadow-glow transition-all duration-300 cursor-pointer"
+              >
             >
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center font-display font-bold text-primary text-lg">
