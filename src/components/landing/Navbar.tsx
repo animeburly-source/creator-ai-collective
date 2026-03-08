@@ -94,7 +94,7 @@ const Navbar = () => {
                 );
               })}
               <div className="flex gap-3 pt-3 mt-2 border-t border-border/50">
-                <Button variant="ghost" size="sm" className="flex-1">Log In</Button>
+                <Button variant="ghost" size="sm" className="flex-1 text-foreground font-medium hover:text-primary">Log In</Button>
                 <Link to="/campaign/create" className="flex-1">
                   <Button size="sm" className="w-full bg-primary shadow-glow">Start Campaign</Button>
                 </Link>
