@@ -41,7 +41,7 @@ const Navbar = () => {
               <El
                 key={link.label}
                 {...(props as any)}
-                className="relative px-4 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-lg hover:bg-muted/50"
+                className="relative px-4 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors rounded-lg hover:bg-muted/50"
               >
                 {link.label}
               </El>
@@ -50,7 +50,7 @@ const Navbar = () => {
         </div>
 
         <div className="hidden md:flex items-center gap-3">
-          <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground">
+          <Button variant="ghost" size="sm" className="text-foreground font-medium hover:text-primary">
             Log In
           </Button>
           <Link to="/campaign/create">
@@ -86,7 +86,7 @@ const Navbar = () => {
                   <El
                     key={link.label}
                     {...(props as any)}
-                    className="text-sm text-muted-foreground hover:text-foreground py-2.5 px-3 rounded-lg hover:bg-muted/50 transition-colors"
+                    className="text-sm font-medium text-foreground hover:text-primary py-2.5 px-3 rounded-lg hover:bg-muted/50 transition-colors"
                     onClick={() => setMobileOpen(false)}
                   >
                     {link.label}
@@ -94,7 +94,7 @@ const Navbar = () => {
                 );
               })}
               <div className="flex gap-3 pt-3 mt-2 border-t border-border/50">
-                <Button variant="ghost" size="sm" className="flex-1">Log In</Button>
+                <Button variant="ghost" size="sm" className="flex-1 text-foreground font-medium hover:text-primary">Log In</Button>
                 <Link to="/campaign/create" className="flex-1">
                   <Button size="sm" className="w-full bg-primary shadow-glow">Start Campaign</Button>
                 </Link>
