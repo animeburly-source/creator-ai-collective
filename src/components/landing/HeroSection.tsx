@@ -162,10 +162,10 @@ const HeroSection = () => {
           transition={{ delay: 1, duration: 0.6 }}
           className="mt-20 text-center"
         >
-          <p className="text-xs font-medium text-primary-foreground/30 uppercase tracking-[0.2em] mb-6">Trusted by global leaders</p>
-          <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
+          <p className="text-sm font-semibold text-primary-foreground/60 uppercase tracking-[0.2em] mb-6">Trusted by global leaders</p>
+          <div className="flex flex-wrap items-center justify-center gap-10 md:gap-14">
             {trustedLogos.map((logo) => (
-              <span key={logo} className="text-lg md:text-xl font-bold text-primary-foreground/20 tracking-wider uppercase">
+              <span key={logo} className="text-xl md:text-2xl font-extrabold text-primary-foreground/50 tracking-wider uppercase hover:text-primary-foreground/70 transition-colors duration-300 cursor-default">
                 {logo}
               </span>
             ))}
