@@ -108,27 +108,26 @@ const HeroSection = () => {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 0.6 }}
-            className="flex flex-wrap justify-center gap-10 md:gap-16"
+            className="grid grid-cols-3 gap-4 md:gap-6 max-w-2xl mx-auto"
           >
             {stats.map((stat, i) => (
               <motion.div
                 key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.9 + i * 0.15 }}
-                whileHover={{ scale: 1.05 }}
-                className="flex items-center gap-3"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.9 + i * 0.15, type: "spring", stiffness: 200 }}
+                whileHover={{ scale: 1.06, y: -4 }}
+                className="relative group/stat flex flex-col items-center gap-2 p-5 md:p-6 rounded-2xl bg-primary-foreground/[0.04] border border-primary-foreground/10 backdrop-blur-md cursor-default transition-all duration-300 hover:border-accent/40 hover:bg-primary-foreground/[0.08]"
               >
-                <div className="w-11 h-11 rounded-xl bg-primary-foreground/5 border border-primary-foreground/10 flex items-center justify-center backdrop-blur-sm">
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-accent/10 to-transparent opacity-0 group-hover/stat:opacity-100 transition-opacity duration-500" />
+                <div className="relative w-12 h-12 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center mb-1 group-hover/stat:shadow-[0_0_20px_-4px_hsl(var(--accent)/0.4)] transition-shadow duration-500">
                   <stat.icon className="w-5 h-5 text-accent" />
                 </div>
-                <div className="text-left">
-                  <p className="text-2xl font-bold text-primary-foreground tracking-tight">{stat.value}</p>
-                  <p className="text-sm text-primary-foreground/40">{stat.label}</p>
-                </div>
+                <p className="relative text-3xl md:text-4xl font-extrabold text-primary-foreground tracking-tight">{stat.value}</p>
+                <p className="relative text-xs md:text-sm font-medium text-primary-foreground/50 uppercase tracking-wider">{stat.label}</p>
               </motion.div>
             ))}
           </motion.div>
