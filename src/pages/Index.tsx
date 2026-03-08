@@ -5,6 +5,7 @@ import BenefitsSection from "@/components/landing/BenefitsSection";
 import HowItWorksSection from "@/components/landing/HowItWorksSection";
 import CreatorShowcase from "@/components/landing/CreatorShowcase";
 import ForBrandsCreators from "@/components/landing/ForBrandsCreators";
+import AnalyticsSection from "@/components/landing/AnalyticsSection";
 import TestimonialsSection from "@/components/landing/TestimonialsSection";
 import CTASection from "@/components/landing/CTASection";
 import Footer from "@/components/landing/Footer";
@@ -18,6 +19,7 @@ const Index = () => {
       <CategoriesSection />
       <BenefitsSection />
       <HowItWorksSection />
+      <AnalyticsSection />
       <CreatorShowcase />
       <ForBrandsCreators />
       <TestimonialsSection />

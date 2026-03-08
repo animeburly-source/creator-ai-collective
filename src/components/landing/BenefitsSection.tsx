@@ -1,26 +1,27 @@
-import { Search, Rocket, BarChart3, ShieldCheck, ArrowUpRight } from "lucide-react";
+import { Search, MessageSquare, BarChart3, CheckCircle2, ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
 
-const benefits = [
+const agents = [
   {
     icon: Search,
-    title: "Discover Creators",
-    description: "AI-powered search across Instagram, YouTube, TikTok, and more. Filter by niche, audience, engagement, and location.",
+    title: "Discovery Agent",
+    description: "Scans millions of profiles to find the perfect brand fit using neural sentiment analysis.",
+    features: ["Fake follower detection", "Audience overlap check"],
+    accent: "primary",
   },
   {
-    icon: Rocket,
-    title: "Run Campaigns",
-    description: "Launch campaigns in minutes. AI handles outreach, negotiations, and deliverable tracking automatically.",
+    icon: MessageSquare,
+    title: "Outreach Agent",
+    description: "Sends personalized, context-aware proposals that get 4x higher response rates than templates.",
+    features: ["Automated follow-ups", "Contract negotiation"],
+    accent: "accent",
   },
   {
     icon: BarChart3,
-    title: "Track Analytics",
-    description: "Real-time dashboards with views, engagement, reach, clicks, conversions, and ROI metrics.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Pay Securely",
-    description: "Escrow-based payments protect both brands and creators. Funds release only on deliverable approval.",
+    title: "Analytics Agent",
+    description: "Tracks every click and conversion in real-time. Predicts campaign ROI before you spend a dime.",
+    features: ["Multi-touch attribution", "Content performance score"],
+    accent: "primary",
   },
 ];
 
@@ -41,39 +42,46 @@ const BenefitsSection = () => {
             viewport={{ once: true }}
             className="inline-block px-4 py-1.5 rounded-full bg-accent/10 text-accent text-sm font-medium mb-4"
           >
-            Platform Features
+            Your Personal AI Marketing Team
           </motion.span>
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-5 text-balance">
-            Everything You Need to <span className="text-gradient">Scale</span>
+            Delegate to <span className="text-gradient">AI Agents</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            One platform to manage your entire influencer marketing workflow
+            Specialized AI agents that work 24/7 to scale your brand presence
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
-          {benefits.map((b, i) => (
+        <div className="grid md:grid-cols-3 gap-5">
+          {agents.map((agent, i) => (
             <motion.div
-              key={b.title}
+              key={agent.title}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.1, duration: 0.5 }}
+              transition={{ delay: i * 0.12, duration: 0.5 }}
               whileHover={{ y: -8 }}
               className="group relative p-8 rounded-2xl glass-card hover:shadow-premium transition-all duration-500 overflow-hidden"
             >
-              {/* Hover gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              
+              <div className={`absolute inset-0 bg-gradient-to-br ${agent.accent === "accent" ? "from-accent/5 to-transparent" : "from-primary/5 to-transparent"} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+
               <div className="relative z-10">
-                <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 group-hover:shadow-glow transition-all duration-500">
-                  <b.icon className="w-7 h-7 text-primary" />
-                </div>
-                <div className="flex items-start justify-between mb-3">
-                  <h3 className="text-xl font-bold text-card-foreground">{b.title}</h3>
+                <div className="flex items-start justify-between mb-6">
+                  <div className={`w-14 h-14 rounded-2xl ${agent.accent === "accent" ? "bg-accent/10" : "bg-primary/10"} flex items-center justify-center group-hover:shadow-glow transition-all duration-500`}>
+                    <agent.icon className={`w-7 h-7 ${agent.accent === "accent" ? "text-accent" : "text-primary"}`} />
+                  </div>
                   <ArrowUpRight className="w-4 h-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-1 group-hover:translate-y-0" />
                 </div>
-                <p className="text-muted-foreground text-sm leading-relaxed">{b.description}</p>
+                <h3 className="text-xl font-bold text-card-foreground mb-3">{agent.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-6">{agent.description}</p>
+                <div className="space-y-2.5">
+                  {agent.features.map((f) => (
+                    <div key={f} className="flex items-center gap-2.5 text-sm text-card-foreground">
+                      <CheckCircle2 className={`w-4 h-4 flex-shrink-0 ${agent.accent === "accent" ? "text-accent" : "text-primary"}`} />
+                      {f}
+                    </div>
+                  ))}
+                </div>
               </div>
             </motion.div>
           ))}
