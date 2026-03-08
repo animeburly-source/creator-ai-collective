@@ -11,7 +11,7 @@ const avatars = [
   { initials: "MK", color: "bg-primary/80" },
 ];
 
-const trustedLogos = ["Amazon", "Spotify", "Nike", "Google", "Swiggy"];
+
 
 const HeroSection = () => {
   return (
