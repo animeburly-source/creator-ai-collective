@@ -59,22 +59,22 @@ const CreatorProfile = () => {
 
       {/* Hero banner */}
       <section className="relative pt-16">
-        <div className="h-48 md:h-64 bg-gradient-hero" />
-        <div className="container mx-auto px-4 lg:px-8 relative -mt-20">
+        <div className="h-56 md:h-72 bg-gradient-hero" />
+        <div className="container mx-auto px-4 lg:px-8 relative -mt-24">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="flex flex-col md:flex-row gap-6 items-start"
+            className="rounded-2xl bg-card border border-border shadow-card p-6 md:p-8 flex flex-col md:flex-row gap-6 items-start"
           >
             {/* Avatar */}
-            <div className="w-28 h-28 md:w-36 md:h-36 rounded-2xl bg-primary/10 border-4 border-background flex items-center justify-center font-display font-bold text-primary text-4xl md:text-5xl shadow-glow">
+            <div className="w-24 h-24 md:w-32 md:h-32 rounded-2xl bg-primary/10 border-4 border-background flex items-center justify-center font-display font-bold text-primary text-3xl md:text-5xl shadow-glow shrink-0">
               {creator.avatar}
             </div>
 
             {/* Info */}
-            <div className="flex-1 pt-2 md:pt-8">
+            <div className="flex-1 min-w-0">
               <div className="flex flex-col sm:flex-row sm:items-center gap-3 mb-2">
-                <h1 className="font-display text-3xl md:text-4xl font-bold">{creator.name}</h1>
+                <h1 className="font-display text-2xl md:text-4xl font-bold text-foreground">{creator.name}</h1>
                 <Badge className="w-fit bg-primary/10 text-primary border-primary/20 hover:bg-primary/20">{creator.category}</Badge>
               </div>
               <div className="flex items-center gap-2 text-muted-foreground mb-3">
@@ -92,7 +92,7 @@ const CreatorProfile = () => {
             </div>
 
             {/* CTA */}
-            <div className="flex flex-col gap-3 pt-2 md:pt-8 w-full sm:w-auto">
+            <div className="flex flex-col gap-3 w-full sm:w-auto shrink-0">
               <Button className="bg-primary hover:bg-primary/90">
                 <Mail className="w-4 h-4 mr-2" /> Contact Creator
               </Button>
