@@ -8,10 +8,11 @@ import ForBrandsCreators from "@/components/landing/ForBrandsCreators";
 import TestimonialsSection from "@/components/landing/TestimonialsSection";
 import CTASection from "@/components/landing/CTASection";
 import Footer from "@/components/landing/Footer";
+import { HeroHighlight } from "@/components/ui/hero-highlight";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <HeroHighlight containerClassName="min-h-screen bg-background">
       <Navbar />
       <HeroSection />
       <CategoriesSection />
@@ -22,7 +23,7 @@ const Index = () => {
       <TestimonialsSection />
       <CTASection />
       <Footer />
-    </div>
+    </HeroHighlight>
   );
 };
 
