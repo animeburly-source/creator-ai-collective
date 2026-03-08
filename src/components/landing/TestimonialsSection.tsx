@@ -1,30 +1,70 @@
-import { Star, Quote } from "lucide-react";
 import { motion } from "framer-motion";
+import { TestimonialsColumn } from "@/components/ui/testimonials-columns-1";
 
 const testimonials = [
   {
-    quote: "CreatorOS cut our campaign launch time by 80%. The AI matching is incredibly accurate — we found perfect creators in minutes.",
+    text: "CreatorOS cut our campaign launch time by 80%. The AI matching is incredibly accurate — we found perfect creators in minutes.",
+    image: "https://randomuser.me/api/portraits/women/1.jpg",
     name: "Ananya Desai",
     role: "Marketing Head, FreshBrew",
-    type: "Brand",
   },
   {
-    quote: "Finally a platform that pays on time and helps me price my work fairly. My income doubled in 3 months.",
+    text: "Finally a platform that pays on time and helps me price my work fairly. My income doubled in 3 months.",
+    image: "https://randomuser.me/api/portraits/men/2.jpg",
     name: "Carlos Martinez",
     role: "Fitness Creator, 1.2M followers",
-    type: "Creator",
   },
   {
-    quote: "Managing 50+ campaigns used to be chaos. Now our entire team runs everything from one dashboard.",
+    text: "Managing 50+ campaigns used to be chaos. Now our entire team runs everything from one dashboard.",
+    image: "https://randomuser.me/api/portraits/women/3.jpg",
     name: "Lisa Wong",
     role: "CEO, InfluenceAgency",
-    type: "Agency",
+  },
+  {
+    text: "The analytics dashboard alone is worth the subscription. We can track ROI in real-time across all campaigns.",
+    image: "https://randomuser.me/api/portraits/men/4.jpg",
+    name: "David Chen",
+    role: "Growth Lead, TechStart",
+  },
+  {
+    text: "I went from 5 brand deals a year to 5 a month. The platform does the outreach so I can focus on creating.",
+    image: "https://randomuser.me/api/portraits/women/5.jpg",
+    name: "Priya Sharma",
+    role: "Fashion Creator, 2.1M followers",
+  },
+  {
+    text: "The escrow payment system gave us peace of mind. No more chasing invoices or worrying about delivery.",
+    image: "https://randomuser.me/api/portraits/women/6.jpg",
+    name: "Sarah Kim",
+    role: "Brand Manager, GlowUp",
+  },
+  {
+    text: "Best influencer marketing tool we've used. The AI recommendations are spot-on every single time.",
+    image: "https://randomuser.me/api/portraits/men/7.jpg",
+    name: "James Okafor",
+    role: "CMO, FreshFoods",
+  },
+  {
+    text: "CreatorOS helped us scale our creator program from 10 to 200+ creators in just 3 months.",
+    image: "https://randomuser.me/api/portraits/women/8.jpg",
+    name: "Maya Rodriguez",
+    role: "Head of Partnerships, StyleCo",
+  },
+  {
+    text: "The media kit feature is a game changer. Brands take me more seriously and I've doubled my rates.",
+    image: "https://randomuser.me/api/portraits/men/9.jpg",
+    name: "Raj Patel",
+    role: "Food Creator, 3.2M followers",
   },
 ];
 
+const firstColumn = testimonials.slice(0, 3);
+const secondColumn = testimonials.slice(3, 6);
+const thirdColumn = testimonials.slice(6, 9);
+
 const TestimonialsSection = () => {
   return (
-    <section className="py-28 bg-secondary/30">
+    <section className="py-28 bg-secondary/30 overflow-hidden">
       <div className="container mx-auto px-4 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -44,41 +84,15 @@ const TestimonialsSection = () => {
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-5">
             Loved by <span className="text-gradient">Thousands</span>
           </h2>
-          <p className="text-muted-foreground text-lg">What our community says about CreatorOS</p>
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            See what our community has to say about CreatorOS
+          </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-5">
-          {testimonials.map((t, i) => (
-            <motion.div
-              key={t.name}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.15, duration: 0.5 }}
-              whileHover={{ y: -6 }}
-              className="group rounded-2xl glass-card p-8 hover:shadow-premium transition-all duration-500 relative overflow-hidden"
-            >
-              <div className="absolute top-6 right-6 opacity-10 group-hover:opacity-20 transition-opacity">
-                <Quote className="w-10 h-10 text-primary" />
-              </div>
-              
-              <div className="flex gap-1 mb-5">
-                {[...Array(5)].map((_, j) => (
-                  <Star key={j} className="w-4 h-4 fill-amber-400 text-amber-400" />
-                ))}
-              </div>
-              <p className="text-card-foreground text-sm leading-relaxed mb-6 relative z-10">"{t.quote}"</p>
-              <div className="flex items-center gap-3 pt-4 border-t border-border/50">
-                <div className="w-11 h-11 rounded-2xl bg-primary/10 flex items-center justify-center font-bold text-primary text-sm">
-                  {t.name.split(" ").map(n => n[0]).join("")}
-                </div>
-                <div>
-                  <p className="text-sm font-bold text-card-foreground">{t.name}</p>
-                  <p className="text-xs text-muted-foreground">{t.role}</p>
-                </div>
-              </div>
-            </motion.div>
-          ))}
+        <div className="flex justify-center gap-6 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] max-h-[750px]">
+          <TestimonialsColumn testimonials={firstColumn} duration={15} />
+          <TestimonialsColumn testimonials={secondColumn} duration={19} className="hidden md:block" />
+          <TestimonialsColumn testimonials={thirdColumn} duration={17} className="hidden lg:block" />
         </div>
       </div>
     </section>
