@@ -1,4 +1,5 @@
 import { Sparkles } from "lucide-react";
+import { motion } from "framer-motion";
 
 const footerLinks = {
   Product: ["Features", "Pricing", "Creator Discovery", "Campaign Manager", "Analytics"],
@@ -9,15 +10,15 @@ const footerLinks = {
 
 const Footer = () => {
   return (
-    <footer className="bg-card border-t border-border py-16">
+    <footer className="border-t border-border/50 py-16 relative">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
           <div className="lg:col-span-1">
-            <a href="#" className="flex items-center gap-2 font-display text-xl font-bold mb-4">
-              <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-                <Sparkles className="w-4 h-4 text-primary-foreground" />
+            <a href="#" className="flex items-center gap-2.5 mb-4 group">
+              <div className="w-9 h-9 rounded-xl bg-primary flex items-center justify-center shadow-glow">
+                <Sparkles className="w-4.5 h-4.5 text-primary-foreground" />
               </div>
-              <span className="text-gradient">CreatorOS</span>
+              <span className="text-gradient font-bold text-xl tracking-tight">CreatorOS</span>
             </a>
             <p className="text-sm text-muted-foreground leading-relaxed">
               The AI-powered platform connecting brands with creators worldwide.
@@ -25,20 +26,24 @@ const Footer = () => {
           </div>
           {Object.entries(footerLinks).map(([title, links]) => (
             <div key={title}>
-              <h4 className="font-display font-semibold text-foreground mb-4">{title}</h4>
+              <h4 className="font-bold text-foreground mb-4 text-sm tracking-wide uppercase">{title}</h4>
               <ul className="space-y-2.5">
                 {links.map((link) => (
                   <li key={link}>
-                    <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                    <motion.a
+                      href="#"
+                      whileHover={{ x: 3 }}
+                      className="text-sm text-muted-foreground hover:text-foreground transition-colors inline-block"
+                    >
                       {link}
-                    </a>
+                    </motion.a>
                   </li>
                 ))}
               </ul>
             </div>
           ))}
         </div>
-        <div className="border-t border-border pt-8 text-center">
+        <div className="border-t border-border/50 pt-8 text-center">
           <p className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} CreatorOS. All rights reserved.
           </p>
