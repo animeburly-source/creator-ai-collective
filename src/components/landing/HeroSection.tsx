@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Highlight } from "@/components/ui/hero-highlight";
-import { Logos3 } from "@/components/ui/logos3";
 
 const avatars = [
   { initials: "JD", color: "bg-primary" },
