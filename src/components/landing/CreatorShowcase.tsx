@@ -77,8 +77,8 @@ const CreatorShowcase = () => {
                   </div>
                 ))}
               </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            </Link>
         </div>
       </div>
     </section>
