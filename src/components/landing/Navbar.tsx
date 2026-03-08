@@ -1,13 +1,14 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Sparkles } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
-  { label: "Discover", href: "#categories" },
-  { label: "For Brands", href: "#for-brands" },
-  { label: "For Creators", href: "#for-creators" },
-  { label: "Pricing", href: "#pricing" },
+  { label: "Discover", href: "/discover", isRoute: true },
+  { label: "For Brands", href: "#for-brands", isRoute: false },
+  { label: "For Creators", href: "#for-creators", isRoute: false },
+  { label: "Pricing", href: "#pricing", isRoute: false },
 ];
 
 const Navbar = () => {
