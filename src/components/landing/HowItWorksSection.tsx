@@ -1,11 +1,11 @@
-import { PenLine, UserSearch, MessageSquare, TrendingUp } from "lucide-react";
+import { Link2, UserSearch, MessageSquare, BarChart3 } from "lucide-react";
 import { motion } from "framer-motion";
 
 const steps = [
-  { icon: PenLine, step: "01", title: "Create Campaign", desc: "Define goals, budget, timeline, and target audience for your campaign." },
-  { icon: UserSearch, step: "02", title: "Find Creators", desc: "AI matches you with the perfect creators based on audience and niche." },
-  { icon: MessageSquare, step: "03", title: "Collaborate", desc: "Negotiate, approve content, and manage deliverables in one place." },
-  { icon: TrendingUp, step: "04", title: "Track Results", desc: "Monitor performance with real-time analytics and ROI tracking." },
+  { icon: Link2, step: "1", title: "Connect Your Store", desc: "Import your products and target audience data with one click from Shopify or Stripe." },
+  { icon: UserSearch, step: "2", title: "AI Creator Sourcing", desc: "Our agents shortlist 100+ creators that perfectly align with your brand's aesthetic and values." },
+  { icon: MessageSquare, step: "3", title: "Automated Outreach", desc: "Personalized pitches are sent via Instagram DM and Email to the top prospects." },
+  { icon: BarChart3, step: "4", title: "Scale and Track", desc: "Monitor content performance and sales attribution through our unified dashboard." },
 ];
 
 const HowItWorksSection = () => {
@@ -63,7 +63,7 @@ const HowItWorksSection = () => {
               >
                 <s.icon className="w-7 h-7 text-primary-foreground" />
               </motion.div>
-              <span className="text-xs font-bold text-primary tracking-[0.2em] uppercase mb-2 block">{s.step}</span>
+              <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-primary/10 text-primary text-xs font-bold mb-3">{s.step}</span>
               <h3 className="text-lg font-bold mb-2 text-foreground">{s.title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
             </motion.div>
