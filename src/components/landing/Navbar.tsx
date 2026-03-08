@@ -48,7 +48,9 @@ const Navbar = () => {
 
         <div className="hidden md:flex items-center gap-3">
           <Button variant="ghost" size="sm">Log In</Button>
-          <Button size="sm" className="bg-primary hover:bg-primary/90">Sign Up Free</Button>
+          <Link to="/campaign/create">
+            <Button size="sm" className="bg-primary hover:bg-primary/90">Start Campaign</Button>
+          </Link>
         </div>
 
         <button
