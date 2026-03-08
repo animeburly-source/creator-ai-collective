@@ -86,7 +86,7 @@ const Navbar = () => {
                   <El
                     key={link.label}
                     {...(props as any)}
-                    className="text-sm text-muted-foreground hover:text-foreground py-2.5 px-3 rounded-lg hover:bg-muted/50 transition-colors"
+                    className="text-sm font-medium text-foreground hover:text-primary py-2.5 px-3 rounded-lg hover:bg-muted/50 transition-colors"
                     onClick={() => setMobileOpen(false)}
                   >
                     {link.label}
