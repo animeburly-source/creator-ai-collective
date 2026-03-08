@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Highlight } from "@/components/ui/hero-highlight";
+import { Logos3 } from "@/components/ui/logos3";
 
 const avatars = [
   { initials: "JD", color: "bg-primary" },
@@ -10,7 +11,7 @@ const avatars = [
   { initials: "MK", color: "bg-primary/80" },
 ];
 
-const trustedLogos = ["Amazon", "Spotify", "Nike", "Google", "Swiggy"];
+
 
 const HeroSection = () => {
   return (
@@ -160,16 +161,9 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1, duration: 0.6 }}
-          className="mt-20 text-center"
+          className="mt-16"
         >
-          <p className="text-sm font-semibold text-primary-foreground/60 uppercase tracking-[0.2em] mb-6">Trusted by global leaders</p>
-          <div className="flex flex-wrap items-center justify-center gap-10 md:gap-14">
-            {trustedLogos.map((logo) => (
-              <span key={logo} className="text-xl md:text-2xl font-extrabold text-primary-foreground/50 tracking-wider uppercase hover:text-primary-foreground/70 transition-colors duration-300 cursor-default">
-                {logo}
-              </span>
-            ))}
-          </div>
+          <Logos3 heading="Trusted by global leaders" />
         </motion.div>
       </div>
 
