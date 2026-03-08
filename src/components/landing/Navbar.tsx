@@ -41,7 +41,7 @@ const Navbar = () => {
               <El
                 key={link.label}
                 {...(props as any)}
-                className="relative px-4 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-lg hover:bg-muted/50"
+                className="relative px-4 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors rounded-lg hover:bg-muted/50"
               >
                 {link.label}
               </El>
