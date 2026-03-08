@@ -1,6 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
 import { Instagram, Youtube, Twitter } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const creators = [
   { name: "Priya Sharma", category: "Fashion", followers: "2.1M", engagement: "4.8%", platforms: ["instagram", "youtube"], avatar: "PS" },
