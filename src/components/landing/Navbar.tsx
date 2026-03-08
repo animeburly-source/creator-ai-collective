@@ -22,7 +22,7 @@ const Navbar = () => {
             <Sparkles className="w-4 h-4 text-primary-foreground" />
           </div>
           <span className="text-gradient">CreatorOS</span>
-        </a>
+        </Link>
 
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
