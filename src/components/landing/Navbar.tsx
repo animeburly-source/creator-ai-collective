@@ -68,16 +68,27 @@ const Navbar = () => {
             className="md:hidden border-t border-border bg-background"
           >
             <div className="flex flex-col p-4 gap-3">
-              {navLinks.map((link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  className="text-sm text-muted-foreground hover:text-foreground py-2"
-                  onClick={() => setMobileOpen(false)}
-                >
-                  {link.label}
-                </a>
-              ))}
+              {navLinks.map((link) =>
+                link.isRoute ? (
+                  <Link
+                    key={link.label}
+                    to={link.href}
+                    className="text-sm text-muted-foreground hover:text-foreground py-2"
+                    onClick={() => setMobileOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                ) : (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    className="text-sm text-muted-foreground hover:text-foreground py-2"
+                    onClick={() => setMobileOpen(false)}
+                  >
+                    {link.label}
+                  </a>
+                )
+              )}
               <div className="flex gap-3 pt-2 border-t border-border">
                 <Button variant="ghost" size="sm" className="flex-1">Log In</Button>
                 <Button size="sm" className="flex-1 bg-primary">Sign Up Free</Button>
