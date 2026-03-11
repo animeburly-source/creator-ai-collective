@@ -1,73 +1,77 @@
-# Welcome to your Lovable project
+# CreatorOS — AI-Powered Influencer Marketing Platform
 
-## Project info
+CreatorOS is a premium, high-performance platform designed to automate and scale influencer marketing. Built with a focus on precision discovery, automated outreach, and real-time ROI tracking.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+![CreatorOS Hero](https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=1000)
 
-## How can I edit this code?
+## ✨ Key Features
 
-There are several ways of editing your application.
+- 🎯 **AI-Powered Discovery**: Find the perfect creators for your brand with precision AI matching.
+- 🤖 **Automated Outreach**: Scale your campaigns with automated negotiation and management.
+- 📊 **Real-time Analytics**: Tracking ROI and campaign performance on the fly.
+- 💳 **Secure Payments**: Escrow-based payment systems for peace of mind.
+- 💎 **Premium UI**: Designed with a sleek Electric Blue + Charcoal + Cyan theme using glassmorphism.
 
-**Use Lovable**
+## 🚀 Tech Stack
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+- **Frontend**: Vite + React + TypeScript
+- **Styling**: Tailwind CSS + shadcn/ui + Framer Motion
+- **Design System**: Visuals generated via **Stitch MCP**
+- **Infrastructure**: Docker + Nginx (Production optimized)
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🛠️ Getting Started
 
-**Use your preferred IDE**
+### Prerequisites
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- Node.js (v20+)
+- npm
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Installation
 
-Follow these steps:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/animeburly-source/creator-ai-collective.git
+   cd creator-ai-collective
+   ```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+2. Install dependencies:
+   ```bash                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+   npm install
+   ```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+3. Start development server:
+   ```bash
+   npm run dev
+   ```
+   The app will be available at `http://localhost:8081`
 
-# Step 3: Install the necessary dependencies.
-npm i
+## 🐳 Docker Deployment
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+The project is fully dockerized with a production-ready Nginx configuration.
+
+### Build and Run
+
+```bash
+# Using Docker Compose
+docker compose up -d --build
 ```
 
-**Edit a file directly in GitHub**
+The production build will be available at `http://localhost:8080`.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Nginx Features
+- SPA Routing support (fallback to index.html)
+- Gzip compression enabled
+- Static asset caching (1-year headers)
+- Health checks included
 
-**Use GitHub Codespaces**
+## 🎨 Design Redesign
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+The platform underwent a major visual overhaul:
+- **Primary Color**: Electric Blue (`#0066FF`)
+- **Secondary Color**: Cyan (`#06B6D4`)
+- **Background**: Charcoal (`#0F172A`)
+- **Aesthetics**: Glassmorphic cards, smooth gradients, and high-fidelity animations preserved from the original build.
 
-## What technologies are used for this project?
+## 📄 License
 
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+(C) 2026 CreatorOS. All rights reserved.
