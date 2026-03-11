@@ -187,8 +187,8 @@ const HeroSection = () => {
                 </span>
               ))}
             </div>
-            <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-[hsl(262_83%_12%)] to-transparent z-10" />
-            <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-[hsl(262_83%_12%)] to-transparent z-10" />
+            <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-[hsl(222_47%_7%)] to-transparent z-10" />
+            <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-[hsl(222_47%_7%)] to-transparent z-10" />
           </div>
         </motion.div>
       </div>

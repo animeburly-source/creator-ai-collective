@@ -8,6 +8,7 @@ import ForBrandsCreators from "@/components/landing/ForBrandsCreators";
 import AnalyticsSection from "@/components/landing/AnalyticsSection";
 import TestimonialsSection from "@/components/landing/TestimonialsSection";
 import CTASection from "@/components/landing/CTASection";
+import PricingSection from "@/components/landing/PricingSection";
 import Footer from "@/components/landing/Footer";
 import { HeroHighlight } from "@/components/ui/hero-highlight";
 
@@ -23,6 +24,7 @@ const Index = () => {
       <CreatorShowcase />
       <ForBrandsCreators />
       <TestimonialsSection />
+      <PricingSection />
       <CTASection />
       <Footer />
     </HeroHighlight>
